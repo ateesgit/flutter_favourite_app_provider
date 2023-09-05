@@ -30,6 +30,12 @@ class FavouritePage extends StatelessWidget {
             ),
           );
         } ),
+        floatingActionButton: FloatingActionButton.large(
+          onPressed: (){
+            provider.clearFavourite();
+            Navigator.of(context).pop();
+          },
+          child: Text('Clear'),),
     );
   }
 }
